@@ -14,7 +14,7 @@ def generate_otp(email: str) -> str:
     else:
         otps = []
 
-    otps = [o for o in otps if o["email"] != email]  # remove old OTP
+    otps = [o for o in otps if o["email"] != email]
     otps.append(otp_data)
 
     with open(OTP_FILE, "w") as f:
